@@ -1,9 +1,14 @@
 package chess.pieces;
 
+import boardgame.Board;
 import chess.ChessPiece;
+import chess.Color;
 
 public class Bishop extends ChessPiece{
-	public Bishop() {
-		super();
+
+	public Bishop(Board board, Color color, int moveCount) {
+		super(board, color, moveCount);
+		// TODO Auto-generated constructor stub
 	}
+	
 }

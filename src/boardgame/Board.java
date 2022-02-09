@@ -1,21 +1,17 @@
 package boardgame;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Board {
 	private int rows;
 	private int columns;
 	
-	private List<Piece> piece = new ArrayList<>();
-
-	public Board() {	
-	}
+	private Piece[][] piece;
 	
-	public Board(int rows, int columns, List<Piece> piece) {
+	public Board(int rows, int columns) {
 		this.rows = rows;
 		this.columns = columns;
-		this.piece = piece;
+		piece = new Piece[rows][columns];
 	}
 
 	public int getRows() {
@@ -32,14 +28,6 @@ public class Board {
 
 	public void setColumns(int columns) {
 		this.columns = columns;
-	}
-
-	public List<Piece> getPiece() {
-		return piece;
-	}
-
-	public Piece piece(int row, int columns) {
-		return null;
 	}
 	
 	public Piece piece(Position position) {
