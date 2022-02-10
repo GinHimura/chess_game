@@ -7,8 +7,14 @@ import chess.Color;
 public class Bishop extends ChessPiece{
 
 	public Bishop(Board board, Color color, int moveCount) {
-		super(board, color, moveCount);
+		super(board, color);
 		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public boolean[][] posibleMoves() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 }

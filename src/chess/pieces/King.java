@@ -10,7 +10,7 @@ public class King extends ChessPiece {
 	private ChessMatch chessMatch;
 
 	public King(Board board, Color color, int moveCount, ChessMatch chessMatch) {
-		super(board, color, moveCount);
+		super(board, color);
 		this.chessMatch = chessMatch;
 	}
 
@@ -20,5 +20,11 @@ public class King extends ChessPiece {
 
 	public void setChessMatch(ChessMatch chessMatch) {
 		this.chessMatch = chessMatch;
+	}
+
+	@Override
+	public boolean[][] posibleMoves() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }
