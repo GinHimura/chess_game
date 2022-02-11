@@ -9,22 +9,26 @@ import chess.Color;
 public class King extends ChessPiece {
 	private ChessMatch chessMatch;
 
-	public King(Board board, Color color, int moveCount, ChessMatch chessMatch) {
+	public King(Board board, Color color) {
 		super(board, color);
-		this.chessMatch = chessMatch;
 	}
 
-	public ChessMatch getChessMatch() {
+	/*public ChessMatch getChessMatch() {
 		return chessMatch;
 	}
 
 	public void setChessMatch(ChessMatch chessMatch) {
 		this.chessMatch = chessMatch;
-	}
+	}*/
 
 	@Override
 	public boolean[][] posibleMoves() {
 		// TODO Auto-generated method stub
 		return null;
+	}
+	
+	@Override
+	public String toString() {
+		return "K";
 	}
 }

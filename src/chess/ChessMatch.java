@@ -1,8 +1,9 @@
 package chess;
 
-import java.util.Iterator;
-
 import boardgame.Board;
+import boardgame.Position;
+import chess.pieces.King;
+import chess.pieces.Rook;
 
 public class ChessMatch {
 	//private int turn;
@@ -15,6 +16,7 @@ public class ChessMatch {
 	
 	public ChessMatch() {
 		board = new Board(8, 8);
+		initialSetup();
 	}
 
 	/*public int getTurn() {
@@ -94,4 +96,10 @@ public class ChessMatch {
 	public ChessPiece replacePromotedPiece(String type) {
 		return enPassantVulnerable;
 	}*/
+	
+	public void initialSetup() {
+		board.placePiece(new Rook(board, Color.WHITE), new Position(2, 1));
+		board.placePiece(new King(board, Color.BLACK), new Position(0, 4));
+		board.placePiece(new King(board, Color.WHITE), new Position(7, 4));
+	}
 }
