@@ -12,7 +12,7 @@ public class Knight extends ChessPiece{
 	}
 
 	@Override
-	public boolean[][] posibleMoves() {
+	public boolean[][] possibleMoves() {
 		// TODO Auto-generated method stub
 		return null;
 	}

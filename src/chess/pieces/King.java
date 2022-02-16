@@ -20,15 +20,15 @@ public class King extends ChessPiece {
 	public void setChessMatch(ChessMatch chessMatch) {
 		this.chessMatch = chessMatch;
 	}*/
-
-	@Override
-	public boolean[][] posibleMoves() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 	
 	@Override
 	public String toString() {
 		return "K";
+	}
+	
+	@Override
+	public boolean[][] possibleMoves() {
+		boolean [][] mat = new boolean[getBoard().getRows()][getBoard().getColumns()];
+		return mat;
 	}
 }
