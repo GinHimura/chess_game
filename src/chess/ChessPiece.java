@@ -20,11 +20,11 @@ public abstract class ChessPiece extends Piece {
 	/* @Override
 	public boolean[][] posibleMoves() {
 		return null;
-	}
+	}*/
 	
 	public ChessPosition getChessPosition() {
-		return null;
-	}*/
+		return ChessPosition.fromPosition(position);
+	}
 	
 	protected boolean isThereOpponentPiece(Position position) {
 		ChessPiece p = (ChessPiece)getBoard().piece(position);
