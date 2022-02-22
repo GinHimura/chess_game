@@ -68,7 +68,6 @@ public class UI {
 			System.out.println("Winner: " + chessMatch.getCurrentPlayer());
 		}
 	}
-
 	
 	public static void printBoard(ChessPiece[][] piece) {
 		for (int i = 0; i < piece.length; i++) {
