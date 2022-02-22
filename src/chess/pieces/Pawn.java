@@ -7,24 +7,74 @@ import chess.ChessPiece;
 import chess.Color;
 
 public class Pawn extends ChessPiece{
-	private ChessMatch chessMatch;
+	//private ChessMatch chessMatch;
 
-	public Pawn(Board board, Color color, int moveCount, ChessMatch chessMatch) {
+	public Pawn(Board board, Color color) {
 		super(board, color);
-		this.chessMatch = chessMatch;
 	}
 
-	public ChessMatch getChessMatch() {
+	/*public ChessMatch getChessMatch() {
 		return chessMatch;
 	}
 
 	public void setChessMatch(ChessMatch chessMatch) {
 		this.chessMatch = chessMatch;
-	}
+	}*/
 
 	@Override
 	public boolean[][] possibleMoves() {
-		// TODO Auto-generated method stub
-		return null;
+		boolean [][] mat = new boolean[getBoard().getRows()][getBoard().getColumns()];
+		Position p = new Position(0, 0);
+		
+		
+		if(getColor() == Color.WHITE){ 
+			p.setValues(position.getRow() - 1, position.getColumn());
+			if(getBoard().positionExists(p) && !getBoard().therelsAPiece(p)) {
+				mat[p.getRow()][p.getColumn()] = true;
+			}
+			
+			p.setValues(position.getRow() - 2, position.getColumn());
+			Position p2 = new Position(position.getRow() - 1, position.getColumn());
+			if(getBoard().positionExists(p) && !getBoard().therelsAPiece(p) && getMoveCount() == 0 && getBoard().positionExists(p2) && !getBoard().therelsAPiece(p2)) {
+				mat[p.getRow()][p.getColumn()] = true;
+			}
+			
+			p.setValues(position.getRow() - 1, position.getColumn() - 1);
+			if(getBoard().positionExists(p) && isThereOpponentPiece(p)) {
+				mat[p.getRow()][p.getColumn()] = true;
+			}
+			
+			p.setValues(position.getRow() - 1, position.getColumn() + 1);
+			if(getBoard().positionExists(p) && isThereOpponentPiece(p)) {
+				mat[p.getRow()][p.getColumn()] = true;
+			}
+		} else {
+			p.setValues(position.getRow() + 1, position.getColumn());
+			if(getBoard().positionExists(p) && !getBoard().therelsAPiece(p)) {
+				mat[p.getRow()][p.getColumn()] = true;
+			}
+			
+			p.setValues(position.getRow() + 2, position.getColumn());
+			Position p2 = new Position(position.getRow() + 1, position.getColumn());
+			if(getBoard().positionExists(p) && !getBoard().therelsAPiece(p) && getMoveCount() == 0 && getBoard().positionExists(p2) && !getBoard().therelsAPiece(p2)) {
+				mat[p.getRow()][p.getColumn()] = true;
+			}
+			
+			p.setValues(position.getRow() + 1, position.getColumn() - 1);
+			if(getBoard().positionExists(p) && isThereOpponentPiece(p)) {
+				mat[p.getRow()][p.getColumn()] = true;
+			}
+			
+			p.setValues(position.getRow() + 1, position.getColumn() + 1);
+			if(getBoard().positionExists(p) && isThereOpponentPiece(p)) {
+				mat[p.getRow()][p.getColumn()] = true;
+			}
+		}
+		return mat;
+	}
+	
+	@Override
+	public String toString() {
+		return "P";
 	}
 }
