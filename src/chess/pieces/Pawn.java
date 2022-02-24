@@ -14,14 +14,6 @@ public class Pawn extends ChessPiece{
 		this.chessMatch = chessMatch;
 	}
 
-	/*public ChessMatch getChessMatch() {
-		return chessMatch;
-	}
-
-	public void setChessMatch(ChessMatch chessMatch) {
-		this.chessMatch = chessMatch;
-	}*/
-
 	@Override
 	public boolean[][] possibleMoves() {
 		boolean [][] mat = new boolean[getBoard().getRows()][getBoard().getColumns()];

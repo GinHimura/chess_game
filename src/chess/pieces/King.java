@@ -13,14 +13,6 @@ public class King extends ChessPiece {
 		super(board, color);
 		this.chessMatch = chessMatch;
 	}
-
-	/*public ChessMatch getChessMatch() {
-		return chessMatch;
-	}
-
-	public void setChessMatch(ChessMatch chessMatch) {
-		this.chessMatch = chessMatch;
-	}*/
 	
 	@Override
 	public String toString() {

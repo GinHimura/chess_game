@@ -28,10 +28,6 @@ public abstract class ChessPiece extends Piece {
 	protected void decreaseMoveCount() {
 		moveCount--;
 	}
-	/* @Override
-	public boolean[][] posibleMoves() {
-		return null;
-	}*/
 	
 	public ChessPosition getChessPosition() {
 		return ChessPosition.fromPosition(position);
